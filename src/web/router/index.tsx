@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Menu, Icon, Layout } from 'antd';
 // import App from '../App'
-import ajaxRequest from '../libs/ajaxRequest.ts'
+import ajaxRequest from '../libs/ajaxRequest'
 
 const { Header, Footer, Sider, Content } = Layout
 const SubMenu = Menu.SubMenu;
@@ -22,10 +22,11 @@ function Users() {
 
 class AppRouter extends React.Component {
   componentDidMount() {
-    // console.log(ajaxRequest)
-    // ajaxRequest.request({
-    //   method: 'post'
-    // })
+    console.log(ajaxRequest)
+    ajaxRequest.request({
+      method: 'get',
+      url: '/shop/page'
+    })
   }
   render() {
     return (

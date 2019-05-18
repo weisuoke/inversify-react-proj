@@ -5,7 +5,7 @@ class AjaxRequest {
   // baseUrl
   constructor() {
     // 请求路径
-    this.baseUrl = process.env.NODE_ENV == 'production' ? 'http://admin.api-test.yizhenjia.com' : 'http://localhost:3000'
+    this.baseUrl = process.env.NODE_ENV == 'production' ? '/' : 'http://localhost:3000'
   }
 
   merge(options) {

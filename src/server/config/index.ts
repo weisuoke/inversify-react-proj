@@ -3,12 +3,13 @@ import {extend} from "lodash";
 // import {extend} from "lodash-es";
 
 let config = {
-    "viewDir": path.join(__dirname, "..", "views"),
-    "staticDir": path.join(__dirname, "..", "assets")
+    "viewDir": join(__dirname, "..", "views"),
+    "staticDir": join(__dirname, "..", "assets")
 }
 if (process.env.NODE_ENV == "development") {
     const localConfig = {
-        baseURL: "http://localhost/basic/web/index.php?r=",
+        // baseURL: "http://localhost/basic/web/index.php?r=",
+        baseURL: "http://admin.api-test.yizhenjia.com",
         cacheMode: false,
         port: 3000
     }

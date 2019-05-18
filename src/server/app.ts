@@ -43,12 +43,14 @@ server.setConfig(app => {
         writeBody: false
     }));
     app.use(serve(config.staticDir));
-    app.use(historyApiFallback());
+    // app.use(historyApiFallback({
+    //     whiteList: ['/']
+    // }));
 }).setErrorConfig(app => {
     errorHandler.error(app, logger);
 });
 
 let app = server.build();
 app.listen(3000, () => {
-    console.log("一灯Inversify启动成功🍺");
+    console.log("邬晓Inversify-server启动成功😸");
 });

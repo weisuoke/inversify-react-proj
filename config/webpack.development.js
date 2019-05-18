@@ -36,10 +36,10 @@ module.exports = {
       warnings: true
     },
     historyApiFallback: true,
-    // proxy: {
-    //   '/*': {
-    //     target: 'http://localhost:3000',
-    //   }
-    // }
+    proxy: {
+      '/': {
+        target: 'http://localhost:3000',
+      }
+    }
   }
 }
